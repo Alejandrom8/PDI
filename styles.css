@@ -14,6 +14,12 @@ table tr .pixel{
     border:0.5px solid rgba(100,100,100);
     border-collapse: collapse;
 }
+.cuadro {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
 
 #menu{
     width:100%;
