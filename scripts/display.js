@@ -24,8 +24,29 @@ function makeDisplay(rows, cols, matrix = null){
 }
 
 function getGrid(){
+    let matrix = [];
     const grid = document.getElementById("grid");
+    const rows = grid.children[0].children;
+    
+    for(let i = 0; i < rows.length; i++){
+        let rowMatrix = []
+
+        for(let j = 0; j < rows[i].children.length; j++){
+            rowMatrix.push(rows[i].children[j].style.backgroundColor);
+        }
+
+        matrix.push(rowMatrix);
+    }
+    // rows.forEach(row => {
+    //     let rowMatrix = [];
+    //     row.forEach(col => {
+    //         rowMatrix.push(col.style.backgroundColor);
+    //     });
+    //     matrix.push(rowMatrix);
+    // });
+    console.log(matrix);
 }
+
 
 
 
