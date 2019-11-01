@@ -1,19 +1,15 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-table{
-    width:auto;
-    height:auto;
-}
-
-table tr .pixel{
-    width:40px;
-    height:12px;
-    border:0.5px solid rgba(100,100,100);
+.pixel {
+    width: 30px;
+    height: 30px;
+    border: 0.5px solid rgba(100, 100, 100);
     border-collapse: collapse;
 }
+
 .cuadro {
     display: inline-block;
     width: 20px;
@@ -21,68 +17,68 @@ table tr .pixel{
     border: 1px solid black;
 }
 
-#menu{
-    width:100%;
-    height:auto;
-    display:flex;
+#menu {
+    width: 100%;
+    height: auto;
+    display: flex;
     position: fixed;
     justify-content: flex-start;
-    align-items:center;
+    align-items: center;
     align-content: center;
-    background-color:#fff;
-    padding:0 5%;
+    background-color: #fff;
+    padding: 0 5%;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
 }
 
-#menu table{
-    margin-right:0;
-    width:auto;
+#menu table {
+    margin-right: 0;
+    width: auto;
     min-width: 12%;
-    height:auto;
-    margin-left:4%;
+    height: auto;
+    margin-left: 4%;
 }
 
-#menu table tr{
+#menu table tr {
     width: 100%;
-    height:auto;
+    height: auto;
 }
 
-#menu table tr td{
-    width:20px;
-    height:20px;
+#menu table tr td {
+    width: 20px;
+    height: 20px;
     display: inline-block;
-    margin:2% 3%;
-    border:1px solid #000;
+    margin: 2% 3%;
+    border: 1px solid #000;
 }
 
-.verde{
-    background-color:#00FF00;
+.verde {
+    background-color: #00FF00;
 }
 
-.naranja{
+.naranja {
     background-color: #FF9E00;
 }
 
-.rojo{
-    background-color:#FF4600;
+.rojo {
+    background-color: #FF4600;
 }
 
-.azul{
+.azul {
     background-color: #00B2FF;
 }
 
-.morado{
+.morado {
     background-color: #3E00B9;
 }
 
-.amarillo{
+.amarillo {
     background-color: #F4D03F;
 }
 
-.negro{
+.negro {
     background-color: #000;
 }
 
-.blanco{
+.blanco {
     background-color: #fff;
 }

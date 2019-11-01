@@ -10,7 +10,7 @@ function makeDisplay(rows, cols, matrix = null) {
                 const pixel = matrix[i][j];
                 finalDisplay += `<td class='pixel' style='background-color:rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]});'></td>`;
             } else {
-                finalDisplay += "<td class='pixel'><td>";
+                finalDisplay += "<td class='pixel'></td>";
             }
         }
         finalDisplay += "</tr>";
@@ -36,16 +36,21 @@ function getGrid() {
         let rowMatrix = []
 
         for (let j = 0; j < rows[i].children.length; j++) {
+
             const pixel = rows[i].children[j].style.backgroundColor;
+
             if (pixel != "") {
                 const filtro1 = pixel.replace(/[a-z]*\(/, "");
                 const filtro2 = filtro1.replace(/\)/, "");
                 const filtro3 = filtro2.split(',');
+
                 const filtro4 = filtro3.map(value => {
                     return parseInt(value);
                 });
+
                 rowMatrix.push(filtro4);
             } else {
+
                 rowMatrix.push([255, 255, 255]);
             }
         }

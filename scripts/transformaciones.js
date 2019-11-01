@@ -11,6 +11,7 @@ function escalaGrises(rgb) {
 function allGray() {
     const newMatrix = [];
     const matrix = getGrid();
+    console.log(matrix);
     for (let i = 0; i < matrix.length; i++) {
         let row = [];
         for (let j = 0; j < matrix[i].length; j++) {
