@@ -1,7 +1,7 @@
 const display = document.getElementById("display")
 
 function makeDisplay(rows, cols, matrix = null) {
-    let finalDisplay = "<table id='grid'>";
+    let finalDisplay = "<table class='table' id='grid'>";
     for (let i = 0; i < rows; i++) {
         finalDisplay += "<tr>"
         for (let j = 0; j < cols; j++) {

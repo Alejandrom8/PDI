@@ -6,35 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Procesador de imagenes con Algebra lineal y javaScript</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
     <header id="menu">
         <h2>PICASO</h2>
-        <table>
-            <tr>
-                <td class="color" style="background-color:#00FF00;"></td>
-                <td class="color" style="background-color: #FF9E00;"></td>
-                <td class="color" style="background-color:#FF4600;"></td>
-                <td class="color" style="background-color:#000;"></td>
-            </tr>
-            <tr>
-                <td class="color" style="background-color:#0046B9;"></td>
-                <td class="color" style="background-color: #F4D03F;"></td>
-                <td class="color" style="background-color: #3E00B9;"></td>
-                <td class="color" style="background-color:#fff;"></td>
-            </tr>
-        </table>
     </header>
-    <br><br><br><br><br>
-    <div id="display"></div>
+    <br><br>
+    <div class="webapp">
+        <aside id="tools">
+            <div id="colorSection" class="card">
+                <div class="card-header">
+                    <span>Colores</span>
+                </div>
+                <div class="card-body">
+                    <table id="pickColor">
+                        <tr>
+                            <td class="color" style="background-color:#00FF00;"></td>
+                            <td class="color" style="background-color: #FF9E00;"></td>
+                            <td class="color" style="background-color:#FF4600;"></td>
+                            <td class="color" style="background-color:#000;"></td>
+                        </tr>
+                        <tr>
+                            <td class="color" style="background-color:#0046B9;"></td>
+                            <td class="color" style="background-color: #F4D03F;"></td>
+                            <td class="color" style="background-color: #3E00B9;"></td>
+                            <td class="color" style="background-color:#fff;"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p>Color personalizado: <input type="color" name="color" id="color"></p>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <span>Filtros</span>
+                </div>
+                <div class="card-body">
+                    <button id="grises" class="btn btn-secondary">Escala de grises</button>
+                    <button id="negativo" class="btn btn-secondary">Negativo</button>
+                    <button id="complementario" class="btn btn-secondary">Complementario</button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <span>Contraste</span>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="contraste">Example Range input</label>
+                        <input type="range" list="tickmarks" class="form-control-range" id="contraste" min="0" max="100" value="0">
+                        <datalist id="tickmarks">
+                            <!-- <option value="-100" label="-100">
+                            <option value="-90">
+                            <option value="-80">
+                            <option value="-70">
+                            <option value="-60">
+                            <option value="-50" label="-50">
+                            <option value="-40">
+                            <option value="-30">
+                            <option value="-20">
+                            <option value="-10"> -->
+                            <option value="0" label="0">
+                            <option value="10">
+                            <option value="20">
+                            <option value="30">
+                            <option value="40">
+                            <option value="50" label="50">
+                            <option value="60">
+                            <option value="70">
+                            <option value="80">
+                            <option value="90">
+                            <option value="100" label="100">
+                        </datalist>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section id="display" class="table-responsive">
+
+        </section>
+    </div>
+
     <script src="scripts/display.js"></script>
     <script src="scripts/funcion_adcional.js"></script>
     <script src="scripts/transformaciones.js"></script>
+    <script src="scripts/controladorFiltros.js"></script>
     <script src="dibujos/prueba2.js"></script>
     <script>
-        makeDisplay(20, 40, dibujo);
+        makeDisplay(100, 100);
     </script>
 </body>
 
